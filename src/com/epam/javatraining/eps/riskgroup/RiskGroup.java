@@ -19,29 +19,4 @@ public class RiskGroup {
     public Range getRange() {
         return range;
     }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null || getClass() != obj.getClass()) {
-            return false;
-        }
-        final RiskGroup rickGroup = (RiskGroup) obj;
-
-        if (this.nameGroup != null ? !this.nameGroup.equals(rickGroup.nameGroup) : rickGroup.nameGroup != null) {
-            return false;
-        }
-        return !(range != null ? !range.equals(rickGroup.range) : rickGroup.range != null);
-    }
-
-    @Override
-    public int hashCode() {
-        int hash = 5;
-        hash = 71 * hash + Objects.hashCode(this.nameGroup);
-        hash = 71 * hash + Objects.hashCode(this.range);
-        return hash;
-    }
-
 }
